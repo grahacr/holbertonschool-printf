@@ -7,13 +7,14 @@
 typedef struct spec
 {
 char *spec;
-char (*f)(char a, ...);
+int (*f)(const char *format, ...);
 } spec_t;
-int spec_ch(const char *format, ...)
-int spec_s(const char *format, ...);
-int spec_spec(const char *format, ...);
-int spec_d(const char *format, ...); 
-int spec_i(const char *format, ...);
-int (*get_spec_func(char *s))(const char *format, ...)
+int print_format(char specifier, va_list ap);
+int print_char(int c);
+int print_string(char *str);
+int print_spec(int c);
+int print_digit(int c);
+int print_integer(int c);
+int (*get_spec_func(char *s))(const char *format, ...);
 int _printf(const char *format, ...);
 #endif
