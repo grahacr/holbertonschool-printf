@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
+#include "functions.c"
+#include "spec_functions.c"
 /**
  *
  */
@@ -41,4 +44,4 @@ int print_format(char specifier, va_list ap)
   else if (specifier == 'i')
     i += print_int((long)(va_arg(ap, int)), 10);
 		   return (i);
-		   }
+}
