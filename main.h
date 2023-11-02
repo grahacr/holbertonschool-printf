@@ -8,7 +8,7 @@
 typedef struct spec
 {
 char *spec;
-int (*f)(const char *format, ...);
+int (*f)(void*, void);
 } spec_t;
 int print_format(char specifier, va_list ap);
 int print_char(int c);
