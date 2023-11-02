@@ -13,7 +13,7 @@ int _printf(const char *format)
   while (*format != '\0')
     {
       if (*format == '%')
-	i += spec_spec(*++format)), ap);
+	i += print_format(*++format)), ap);
  else
   i +=  write(1, format, 1);
 ++format;
@@ -32,4 +32,6 @@ int print_format(char specifier, va_list ap)
   if (specifier == 'c')
    i = print_char(va_arg(ap, int));
   else if (specifier == 's')
-    i = print_str(va_arg
+    i += print_str(va_arg(ap, char *));
+  else if (specifier == '%')
+    i += print_
