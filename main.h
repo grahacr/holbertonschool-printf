@@ -10,7 +10,7 @@ char *spec;
 int (*f)(const char *format, ...);
 } spec_t;
 int print_format(char specifier, va_list ap);
-int print_char(int c);
+int print_char(char c);
 int print_string(char *str);
 int print_spec(int c);
 int print_digit(long n, int base);

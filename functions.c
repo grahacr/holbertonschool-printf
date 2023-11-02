@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
+#include <stdarg.h>
 /**
  *
  *
  */
-int print_char(int c);
+int print_char(int c)
 {
 	return write(1, &c, 1);
 }
@@ -21,7 +23,7 @@ int print_string(char *str)
 }
 int print_spec(char c)
 {
-	char c = "%";
+	c = "%";
 	write(1, &c, 1);
 	return (0);
 }
