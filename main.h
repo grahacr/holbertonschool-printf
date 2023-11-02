@@ -16,6 +16,6 @@ int print_string(char *str);
 int print_spec(char c);
 int print_digit(long n, int base);
 int print_integer(int c);
-int (*get_spec_func(char *s))(const char *format, ...);
+int (*get_spec_func(char *s))(void *, void *);
 int _printf(const char *format, ...);
 #endif
