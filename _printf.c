@@ -29,14 +29,14 @@ return (i);
  *
  *
  */
-int print_format(char specifier, va_list ap)
+int print_format(const char *, va_list ap)
 {
   int i;
   i = 0;
   if (specifier == 'c')
    i = print_char(va_arg(ap, int));
   else if (specifier == 's')
-    i += print_str(va_arg(ap, char *));
+    i += print_string(va_arg(ap, char *));
   else if (specifier == '%')
     i += print_spec(va_arg(ap, char));
   else if (specifier == 'd')

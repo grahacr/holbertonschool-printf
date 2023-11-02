@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include "functions.c"
 /**
  *
  *
@@ -12,7 +13,7 @@ int (*get_spec_func(char *s))(void *, void *)
 {
   spec_t specs[] = {
     { "c", print_char },
-      { "s", print_s },
+      { "s", print_string },
       { "%", print_spec },
 	{ "d", print_digit },
 	  { "i", print_int },

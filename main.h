@@ -1,3 +1,4 @@
+#include "functions.c"
 #ifndef main_h
 #define main_h
 #include <stdarg.h>
@@ -8,7 +9,7 @@
 typedef struct spec
 {
 char *spec;
-int (*f)(const char *format, ...);
+int (*f)(int, const char *);
 } spec_t;
 int print_format(char specifier, va_list ap);
 int print_char(int c);
