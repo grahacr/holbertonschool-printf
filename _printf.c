@@ -5,7 +5,7 @@
 /**
  *
  */
-int _printf(const char *format)
+int _printf(const char *format, ...)
 {
   va_list ap;
   int i;
@@ -19,7 +19,7 @@ int _printf(const char *format)
 ++format;
 	  
     }
-return i;
+return (i);
 }
 /**
  *
@@ -34,4 +34,10 @@ int print_format(char specifier, va_list ap)
   else if (specifier == 's')
     i += print_str(va_arg(ap, char *));
   else if (specifier == '%')
-    i += print_
+    i += print_spec(va_arg(ap, char));
+  else if (specifier == 'd')
+    i += print_digit((long)(va_arg(ap, int)), 10);
+  else if (specifier == 'i')
+    i += print_int((long)(va_arg(ap, int)), 10;
+		   return (i);
+		   }
