@@ -7,7 +7,7 @@
  *
  *
  */
-int (*get_spec_func(char *s))(void, void)
+int (*get_spec_func(char *s))(const char *, ...)
 {
   spec_t specs[] {
     { "c", print_char },
