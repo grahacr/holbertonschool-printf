@@ -2,6 +2,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 /**
  *
  *
@@ -23,8 +24,7 @@ int print_string(char *str)
 }
 int print_spec(char c)
 {
-	c = "%";
+	c = '%';
 	write(1, &c, 1);
 	return (0);
 }
-int print_digit(int c); 
