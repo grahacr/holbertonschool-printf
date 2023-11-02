@@ -13,11 +13,12 @@ int _printf(const char *format, ...)
   while (*format != '\0')
     {
       if (*format == '%')
-	i += print_format(*++format)), ap);
- else
-  i +=  write(1, format, 1);
-++format;
-	  
+      {
+	      i += print_format(*(++format), ap);
+      }
+      else
+	      i +=  write(1, format, 1);
+      ++format;	  
     }
 return (i);
 }
@@ -38,6 +39,6 @@ int print_format(char specifier, va_list ap)
   else if (specifier == 'd')
     i += print_digit((long)(va_arg(ap, int)), 10);
   else if (specifier == 'i')
-    i += print_int((long)(va_arg(ap, int)), 10;
+    i += print_int((long)(va_arg(ap, int)), 10);
 		   return (i);
 		   }
