@@ -16,6 +16,6 @@ int print_string(va_list ap);
 int print_spec(va_list ap);
 int print_digit(va_list ap);
 int print_integer(va_list ap);
-int (*get_spec_func(char *s))(va_list ap);
+int (*get_spec_func(const char *s))(va_list ap);
 int _printf(const char *format, ...);
 #endif
