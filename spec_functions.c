@@ -14,12 +14,10 @@ int (*get_spec_func(const char *s))(va_list ap)
     { "c", print_char },
       { "s", print_string },
       { "%", print_spec },
-	{ "d", print_digit },
-	  { "i", print_integer },
 	    { NULL, NULL }
   };
   int i = 0;
-  while (i < 5)
+  while (i < 3)
     {
       if (strcmp(s,specs[i].spec) == 0)
 	  return (specs[i].f);
