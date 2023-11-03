@@ -17,11 +17,12 @@ int (*get_spec_func(const char *s))(va_list ap)
 	    { NULL, NULL }
   };
   int i = 0;
-  while (i < 4)
+  while (specs[i].spec != NULL)
     {
       if (strcmp(s,specs[i].spec) == 0)
-	  return (specs[i].f(va_list ap));
-		  i++;
+	  return (specs[i].f;
     }
-  return (0);
+	i++;
+    }
+  return (NULL);
 }
