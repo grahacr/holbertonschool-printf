@@ -24,7 +24,8 @@ int print_string(va_list ap)
 int print_spec(va_list ap)
 {
 	(void) ap;
-	char c = '%';
+	char c;
+	c = '%';
 	write(1, &c, 1);
 	return (1);
 }
