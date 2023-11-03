@@ -8,7 +8,7 @@
  *
  *
  */
-int (*get_spec_func(char *s))(const char *, va_list)
+int (*get_spec_func(char *s))(const char *, va_list ap)
 {
   spec_t specs[] = {
     { "c", print_char },
