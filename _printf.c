@@ -17,7 +17,7 @@ int written;
       if (*format == '%')
       {
 	      format++;
-	      written = get_spec_func(format)(format, ap);
+	      written = get_spec_func((format)(format, ap));
 	      if (written < 0)
 		      return written;
 	      i += written;
