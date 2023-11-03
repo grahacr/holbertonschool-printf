@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
     {
       if (*format == '%')
       {
-	      i += get_spec_func(*(++format), ap);
+	      i += get_spec_func((++format), ap);
       }
       else
 	      i +=  write(1, format, 1);
