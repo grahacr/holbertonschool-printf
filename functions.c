@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <string.h>
 /**
  *
  *
@@ -22,6 +23,7 @@ int print_string(va_list ap)
 }
 int print_spec(va_list ap)
 {
+	(void) ap;
 	char c = '%';
 	write(1, &c, 1);
 	return (1);
