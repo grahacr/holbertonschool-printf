@@ -9,17 +9,23 @@
 int _printf(const char *format, ...)
 {
   va_list ap;
-  int i;
+  int i = 0;
+int written;
   va_start(ap, format);
   while (*format != '\0')
     {
       if (*format == '%')
       {
-	      i += get_spec_func((++format), ap);
+	      format++;
+	      written = get_spec_func(format)(format, ap);
+	      if (written < 0)
+		      return written;
+	      i += written;
       }
       else
 	      i +=  write(1, format, 1);
-      ++format;	  
+      format++;	  
     }
+va_end(ap);
 return (i);
 }
