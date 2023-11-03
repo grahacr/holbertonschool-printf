@@ -3,45 +3,29 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include "functions.c"
-#include "spec_functions.c"
 /**
  *
  */
 int _printf(const char *format, ...)
 {
   va_list ap;
-  int i;
+  int i = 0;
+int written;
   va_start(ap, format);
   while (*format != '\0')
     {
       if (*format == '%')
       {
-	      i += print_format(*(++format), ap);
+	      format++;
+	      written = get_spec_func(format)(format, ap);
+	      if (written < 0)
+		      return written;
+	      i += written;
       }
       else
 	      i +=  write(1, format, 1);
-      ++format;	  
+      format++;	  
     }
+va_end(ap);
 return (i);
-}
-/**
- *
- *
- */
-int print_format(const char *, va_list ap)
-{
-  int i;
-  i = 0;
-  if (specifier == 'c')
-   i = print_char(va_arg(ap, int));
-  else if (specifier == 's')
-    i += print_string(va_arg(ap, char *));
-  else if (specifier == '%')
-    i += print_spec(va_arg(ap, char));
-  else if (specifier == 'd')
-    i += print_digit((long)(va_arg(ap, int)), 10);
-  else if (specifier == 'i')
-    i += print_int((long)(va_arg(ap, int)), 10);
-		   return (i);
 }
