@@ -19,9 +19,11 @@ int written;
 	      format++;
 	      written = get_spec_func(format)(ap);
 	      if (written < 0)
+	      {
 		      return written;
+	      }
 	      i += written;
-	      format++;
+	      
       }
       else
 	      i +=  write(1, format, 1);
