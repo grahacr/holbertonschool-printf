@@ -9,14 +9,14 @@
  *
  *
  */
-int (*get_spec_func(char *s))(const char *, ...)
+int (*get_spec_func(char *s))(const char *, va_list)
 {
   spec_t specs[] = {
     { "c", print_char },
       { "s", print_string },
       { "%", print_spec },
 	{ "d", print_digit },
-	  { "i", print_int },
+	  { "i", print_integer },
 	    { NULL, NULL }
   };
   int i = 0;
