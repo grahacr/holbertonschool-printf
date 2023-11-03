@@ -7,22 +7,19 @@
  *
  *
  */
-int print_char(int c)
+int print_char(va_list)
 {
-  return (write(1, &c, 1));
+	char c = va_arg(ap, int);
+	write(1, &c, 1);
+	return 1;
 }
-int print_string(char *str)
+int print_string(va_list)
 {
-	int i = 0;
-	while (*str != '\0')
-	{
-		print_char((int)*str);
-		++i;
-		++str;
-	}
-	return (i);
+	char *str = va_arg(ap, char*);
+	int len = strlen(str);
+	write(1, &str, len);
 }
-int print_spec(char c)
+int print_spec(va_list)
 {
 	c = '%';
 	write(1, &c, 1);

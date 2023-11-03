@@ -10,11 +10,12 @@ typedef struct spec
 char *spec;
 int (*f)(va_list);
 } spec_t;
-int print_char(int c);
-int print_string(char *str);
-int print_spec(char c);
-int print_digit(long n, int base);
-int print_integer(int c);
+int print_format(va_list);
+int print_char(va_list);
+int print_string(va_list);
+int print_spec(va_list);
+int print_digit(va_list);
+int print_integer(va_list);
 int (*get_spec_func(char *s))(va_list);
 int _printf(const char *format, ...);
 #endif
