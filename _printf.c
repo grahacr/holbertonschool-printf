@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include "functions.c"
-#include "spec_functions.c"
 /**
  *
  */
