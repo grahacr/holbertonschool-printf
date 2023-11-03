@@ -17,31 +17,11 @@ int _printf(const char *format, ...)
     {
       if (*format == '%')
       {
-	      i += print_format(*(++format), ap);
+	      i += get_spec_func(*(++format), ap);
       }
       else
 	      i +=  write(1, format, 1);
       ++format;	  
     }
 return (i);
-}
-/**
- *
- *
- */
-int print_format(const char *, va_list ap)
-{
-  int i;
-  i = 0;
-  if (specifier == 'c')
-   i = print_char(va_arg(ap, int));
-  else if (specifier == 's')
-    i += print_string(va_arg(ap, char *));
-  else if (specifier == '%')
-    i += print_spec(va_arg(ap, char));
-  else if (specifier == 'd')
-    i += print_digit((long)(va_arg(ap, int)), 10);
-  else if (specifier == 'i')
-    i += print_int((long)(va_arg(ap, int)), 10);
-		   return (i);
 }
