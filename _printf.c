@@ -26,7 +26,9 @@ int written;
 	      
       }
       else
+	{
 	      i +=  write(1, format, 1);
+	}
       format++;	  
     }
 va_end(ap);

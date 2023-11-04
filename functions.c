@@ -23,8 +23,7 @@ int print_string(va_list ap)
 }
 int print_spec(va_list ap)
 {
-	char a;	
-	a = '%';
+	char a = '%';
 	(void) ap;
 	write(1, &a, 1);
 	return (1);
