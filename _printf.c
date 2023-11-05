@@ -10,8 +10,8 @@ int _printf(const char *format, ...)
 {
   va_list ap;
   int i = 0;
-int (*written)(va_list ap);
-  va_start(ap, format);
+	va_start(ap, format);
+int (*written)(va_list);
   while (*format != '\0')
     {
       if (*format == '%')
