@@ -10,6 +10,7 @@
  */
 int (*get_spec_func(const char *s))(va_list ap)
 {
+	printf("%s\n", s");
   spec_t specs[] = {
     { "c", print_char },
       { "s", print_string },
