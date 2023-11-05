@@ -24,7 +24,7 @@ int (*written)(va_list);
 	      }
       else 
 	      {
-		      i += write(1, format -1, 1);
+		      i += write(1, format, 1);
       }
       }
       else
