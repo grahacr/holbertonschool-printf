@@ -9,8 +9,12 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
+	int success;
+int (*written)(va_list);
 	int i = 0;
-	va_start(ap, format);
+	if (format)
+	{
+		va_start(ap, format);
 	while (*format != '\0')
 	{
 		if (*format == '%')
@@ -23,11 +27,15 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				int (*written)(va_list);
 				written = get_spec_func(format);
 				if (written != NULL)
 				{
-					i += written(ap);
+					success = written(ap);
+					if (success == -1)
+					{
+						return (-1);
+						i += success;
+					}
 				}
 			}
 		}
