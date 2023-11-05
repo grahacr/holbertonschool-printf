@@ -8,34 +8,34 @@
  */
 int _printf(const char *format, ...)
 {
-  va_list ap;
-  int i = 0;
-va_start(ap, format);
-  while (*format != '\0')
-    {
-      if (*format == '%')
-      {
-	      format++;
-	      if (*format != '\0')
-	      {
-	      int (*written)(va_list);
-	      written = get_spec_func(format);
-	      if (written)
-	      {
-		      i += written(ap);
-	      }
-      else 
-	      {
-		      i += write(1, format - 1, 1);
-      }
-      }
-    }
-      else
+	va_list ap;
+	int i = 0;
+	va_start(ap, format);
+	while (*format != '\0')
 	{
-	      i +=  write(1, format, 1);
+		if (*format == '%')
+		{
+			format++;
+			if (*format != '\0')
+			{
+				int (*written)(va_list);
+				written = get_spec_func(format);
+				if (written)
+				{
+					i += written(ap);
+				}
+				else
+				{
+					i += write(1, format - 1, 1);
+				}
+			}
+		}
+		else
+		{
+			i +=  write(1, format, 1);
+		}
+		format++;	  
 	}
-      format++;	  
-    }
-va_end(ap);
-return (i);
+	va_end(ap);
+	return (i);
 }
