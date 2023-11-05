@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
   va_list ap;
   int i = 0;
-int (*written)(va_list);
+int (*written)(va_list ap);
   va_start(ap, format);
   while (*format != '\0')
     {
