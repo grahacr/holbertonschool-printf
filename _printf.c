@@ -19,8 +19,12 @@ int (*written)(va_list);
 	      format++;
 	      written = get_spec_func(format);
 	      if (written)
+	      {
 		      i += written(ap);
-      else i += write(1, format -1, 1);
+	      }
+      else 
+	      {
+		      i += write(1, format -1, 1);
       }
       else
 	{
