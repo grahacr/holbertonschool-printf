@@ -11,14 +11,18 @@
 int print_char(va_list ap)
 {
 	char c = va_arg(ap, int);
-	write(1, &c, 1);
-	return 1;
+	putchar(c);
+	return (1);
 }
 int print_string(va_list ap)
 {
 	char *str = va_arg(ap, char*);
 	int len = strlen(str);
-	write(1, str, len);
+	int i;
+	for (i = 0; i < len; i++)
+		{
+			putchar(str[i]);
+		}
 	return (len);
 }
 int print_spec(va_list ap)
