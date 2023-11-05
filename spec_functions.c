@@ -16,7 +16,6 @@ int (*get_spec_func(const char *s))(va_list ap)
 	    { NULL, NULL }
   };
   int i = 0;
-	printf("%s\n", s);
   while (specs[i].spec != NULL)
     {
       if (strcmp(s,specs[i].spec) == 0)
