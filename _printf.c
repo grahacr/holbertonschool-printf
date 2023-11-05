@@ -23,7 +23,7 @@ int (*written)(va_list);
 			if (*format == '%')
 			{
 				i++;
-				putchar(*format);
+				putchar('%');
 			}
 			else
 			{
@@ -33,9 +33,10 @@ int (*written)(va_list);
 					success = written(ap);
 					if (success == -1)
 					{
+						va_end(ap)
 						return (-1);
-						i += success;
 					}
+					i += success;
 				}
 			}
 		}
