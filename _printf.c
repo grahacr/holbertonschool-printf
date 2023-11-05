@@ -16,8 +16,6 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format != '\0')
-			{
 				if (*format == '%')
 				{
 					i += write(1, "%", 1);
@@ -42,8 +40,7 @@ int _printf(const char *format, ...)
 		{
 			i += write(1, format, 1);
 		}
-		format++;	  
-	}
+		format++;
 	va_end(ap);
 	return (i);
 }
