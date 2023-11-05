@@ -26,6 +26,7 @@ int (*written)(va_list);
 	      {
 		      i += write(1, format -1, 1);
       }
+      }
       else
 	{
 	      i +=  write(1, format, 1);
@@ -34,5 +35,4 @@ int (*written)(va_list);
     }
 va_end(ap);
 return (i);
-}
 }
