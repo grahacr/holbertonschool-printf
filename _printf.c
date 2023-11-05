@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 				{
 					int (*written)(va_list);
 					written = get_spec_func(format);
+				int (*written)(va_list);
+				written = get_spec_func(format);
 				if (written != NULL)
 				{
 					i += written(ap);
