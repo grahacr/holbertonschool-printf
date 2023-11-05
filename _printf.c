@@ -17,7 +17,7 @@ int (*written)(va_list);
       if (*format == '%')
       {
 	      format++;
-	      written = get_spec_func(*format);
+	      written = get_spec_func(format);
 	      i += written(ap);
 	      
       }
