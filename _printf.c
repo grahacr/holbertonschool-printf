@@ -18,9 +18,15 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format != '\0')
 			{
-				int (*written)(va_list);
-				written = get_spec_func(format);
-				if (written)
+				if (*format == '%')
+				{
+					i += write(1, "%", 1);
+				}
+				else
+				{
+					int (*written)(va_list);
+					written = get_spec_func(format);
+				if (written != NULL)
 				{
 					i += written(ap);
 				}
@@ -32,7 +38,12 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			i +=  write(1, format, 1);
+			i +=  write(1, "%", 1);
+			break;
+		}
+		else
+		{
+			i += write(1, format, 1);
 		}
 		format++;	  
 	}
