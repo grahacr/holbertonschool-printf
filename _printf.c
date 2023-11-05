@@ -16,26 +16,21 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-				if (*format == '%')
-				{
-					i += write(1, "%", 1);
-				}
-				else
-				{
-					int (*written)(va_list);
-					written = get_spec_func(format);
+			if (*format == '%')
+			{
+				i += write(1, "%", 1);
+			}
+			else
+			{
+				int (*written)(va_list);
+				written = get_spec_func(format);
 				if (written != NULL)
 				{
 					i += written(ap);
 				}
-				}
+			}
 		}
-		else
-		{
-			i +=  write(1, "%", 1);
-			break;
-		}
-		}
+	}
 		else
 		{
 			i += write(1, format, 1);
