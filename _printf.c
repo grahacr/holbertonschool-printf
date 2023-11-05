@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
   va_list ap;
   int i = 0;
 	va_start(ap, format);
-int (*written)(va_list);
+int (*written)(ap);
   while (*format != '\0')
     {
       if (*format == '%')
