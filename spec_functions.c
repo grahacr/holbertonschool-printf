@@ -19,7 +19,7 @@ int (*get_spec_func(const char s))(va_list ap)
   int i = 0;
   while (specs[i].spec != NULL)
     {
-      if (strcmp(*s,specs[i].spec) == 0)
+      if (strcmp(s,specs[i].spec) == 0)
       {
 	  return (specs[i].f);
     }
