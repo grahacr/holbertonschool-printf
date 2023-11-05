@@ -33,7 +33,7 @@ int (*written)(va_list);
 					success = written(ap);
 					if (success == -1)
 					{
-						va_end(ap)
+						va_end(ap);
 						return (-1);
 					}
 					i += success;
