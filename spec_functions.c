@@ -21,6 +21,7 @@ int (*get_spec_func(const char *s))(va_list ap)
       if (strcmp(s,specs[i].spec) == 0)
       {
 	  return (specs[i].f);
+	      break;
     }
 	i++;
     }
