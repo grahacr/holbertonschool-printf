@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 			{
 				int (*written)(va_list);
 				written = get_spec_func(format);
-				while (*written)
+				if (*written)
 				{
 					i += written(ap);
 				}
