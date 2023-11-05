@@ -13,6 +13,6 @@ int (*f)(va_list);
 int print_char(va_list ap);
 int print_string(va_list ap);
 int print_spec(va_list ap);
-int (*get_spec_func(const char s))(va_list ap);
+int (*get_spec_func(const char *s))(va_list ap);
 int _printf(const char *format, ...);
 #endif
