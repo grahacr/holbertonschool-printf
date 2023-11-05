@@ -48,4 +48,6 @@ int (*written)(va_list);
 	}
 	va_end(ap);
 	return (i);
+	}
+	return (-1);
 }
