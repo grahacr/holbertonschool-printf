@@ -30,11 +30,7 @@ int _printf(const char *format, ...)
 				{
 					i += written(ap);
 				}
-				else
-				{
-					i += write(1, format - 1, 1);
 				}
-			}
 		}
 		else
 		{
