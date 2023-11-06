@@ -20,7 +20,7 @@ int (*get_spec_func(const char *s))(va_list ap)
     {
       if (specs[i].spec == *s)
       {
-	  return (specs[i].f);
+        return (specs[i].f);
       }
 	i++;
     }
