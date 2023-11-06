@@ -19,18 +19,22 @@ int print_string(va_list ap)
 	char *str = va_arg(ap, char*);
 	int len = strlen(str);
 	int i;
+
+	if (str != NULL)
+	{
 	for (i = 0; i < len; i++)
+	{
+		putchar(str[i]);
+		return (len);
+	}
+	else
+	{
+		for (i = 0; i < 5; i++);
 		{
-		  if (str != NULL)
-		    {
-		      putchar(str[i]);
-	return (len);
-	  }
- else
-   {
-     str = "(nil)";
-     putchar(str[i]);
-		return (5);
-   }
- }
+			str = "(nil)";
+			putchar(str[i]);
+			return (5);
+		}
+	}
+	}
 }
