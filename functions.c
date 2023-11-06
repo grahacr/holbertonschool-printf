@@ -28,11 +28,11 @@ int print_string(va_list ap)
 	return (len);
 	  }
  else
-     putchar("(");
-	putchar("n");
-	putchar("u");
-putchar("l");
-	putchar("l");
-	putchar(")");
+     putchar('(');
+	putchar('n');
+	putchar('u');
+putchar('l');
+	putchar('l');
+	putchar(')');
 	return (6);
 }
