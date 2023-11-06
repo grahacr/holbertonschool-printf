@@ -29,12 +29,7 @@ int print_string(va_list ap)
 	  }
  else
    {
-     putchar('(');
-	putchar('n');
-	putchar('u');
-putchar('l');
-	putchar('l');
-	putchar(')');
+     putchar("(null");
 	return (6);
 }
 }
