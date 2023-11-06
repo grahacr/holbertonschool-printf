@@ -11,17 +11,17 @@
 int (*get_spec_func(const char *s))(va_list ap)
 {
   spec_t specs[] = {
-    { "c", print_char },
-      { "s", print_string },
-	    { NULL, NULL }
+	  { 'c', print_char },
+	  { 's', print_string },
+	  { '\0', NULL }
   };
   int i = 0;
-  while (specs[i].spec != NULL)
+  while (specs[i].spec != '\0')
     {
-      if (strcmp(s,specs[i].spec) == 0)
+      if (specs[i].spec == *s)
       {
 	  return (specs[i].f);
-    }
+      }
 	i++;
     }
   return (NULL);
