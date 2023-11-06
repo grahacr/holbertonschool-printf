@@ -29,6 +29,6 @@ int (*get_spec_func(const char *s))(va_list ap)
 	i++;
     }
   putchar('%');
-  putchar(s);
-  return (print_2;
+  putchar(*s);
+  return (print_2);
 }
