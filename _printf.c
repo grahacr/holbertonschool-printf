@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 					i++;
 					putchar('%');
 				}
-				else if (*format == NULL)
+				else if (format == NULL)
 				{
 					break;
 				}
