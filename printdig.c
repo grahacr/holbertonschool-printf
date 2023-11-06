@@ -3,7 +3,6 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <string.h>
-#include "main.h"
 int print_digit(va_list ap)
 {
 	int count = 0;
