@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				}
 				else if (*format == '\0')
 				{
-					putchar('');
+					putchar("");
 				}
 				else
 				{
