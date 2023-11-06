@@ -16,10 +16,6 @@ int (*get_spec_func(const char *s))(va_list ap)
 	  { '\0', print_null }
   };
   int i = 0;
-  if (s[i] == '\0')
-    {
-      return (NULL);
-    }
   while (i < 3)
     {
       if (specs[i].spec == *s)
