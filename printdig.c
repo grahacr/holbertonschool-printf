@@ -33,7 +33,7 @@ int print_digit(va_list ap)
 	}
 	else
 	{
-		hold = hold = calc;
+		hold = calc;
 		track_dig = 1;
 	while (hold >= 10)
 		{
