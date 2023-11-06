@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	int (*written)(va_list);
 	int i = 0;
 	if (format)
-{
+	{
 		va_start(ap, format);
 		while (*format != '\0')
 		{
@@ -24,6 +24,10 @@ int _printf(const char *format, ...)
 				{
 					i++;
 					putchar('%');
+				}
+				else if (*format == '0')
+				{
+					break;
 				}
 				else
 				{
@@ -44,7 +48,7 @@ int _printf(const char *format, ...)
 			{
 				putchar(*format);
 				i++;
-      }
+			}
 			format++;
 		}
 	va_end(ap);
