@@ -20,14 +20,16 @@ int print_string(va_list ap)
 	int len = strlen(str);
 	int i;
 	if (str != NULL)
+	  {
 	for (i = 0; i < len; i++)
 		{
 			putchar(str[i]);
 		}
 	return (len);
+	  }
  else
      putchar("(");
-putchar("n";
+	putchar("n");
 	putchar("u");
 putchar("l");
 	putchar("l");
