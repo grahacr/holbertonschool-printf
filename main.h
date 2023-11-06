@@ -15,4 +15,5 @@ int print_string(va_list ap);
 int (*get_spec_func(const char *s))(va_list ap);
 int _printf(const char *format, ...);
 int print_2(va_list ap);
+int print_null(va_list ap);
 #endif

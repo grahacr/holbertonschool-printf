@@ -13,7 +13,7 @@ int (*get_spec_func(const char *s))(va_list ap)
   spec_t specs[] = {
 	  { 'c', print_char },
 	  { 's', print_string },
-	  { '\0', NULL }
+	  { '\0', print_null }
   };
   int i = 0;
   if (s[i] == '\0')

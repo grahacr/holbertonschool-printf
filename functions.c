@@ -44,3 +44,8 @@ int print_2(va_list ap)
   (void) ap;
   return (2);
 }
+int print_null(va_list ap)
+{
+  (void) ap;
+  return (-1);
+}
