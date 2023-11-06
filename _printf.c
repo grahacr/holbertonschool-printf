@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				}
 				else if (*format == '\0')
 				{
-					std::putchar(0x07);
+					putchar('');
 				}
 				else
 				{
