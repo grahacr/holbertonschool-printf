@@ -12,3 +12,10 @@ _printf - prints all characters until it reaches a format specifier (%) or the e
 The _printf function format specifier "%" takes 5 potential arguments. "c" finds a variable containing a single character and prints it over the "%c". "s" finds a variable containing a string of characters and prints it over the "%s". "%" reads input as "%%" which will let the function know to print a signle "%". "d" finds a variable containing a string of numbers and converts those numbers into an integer value for other uses such as arithmetic. It will then print out the full integer one by one. "i" at this moment handles a string of numbers the same as "%d". So the same process with a different specifier.
 .B
 .IP "c"
+int print_char(va_list ap); This function finds the argument passed and prints the singular character that corresponds with the placement of the %c.
+.B
+.IP "s"
+int print_string(va_list ap); This function finds the argument passed and prints the string of characters that corresponds with the placement of the %s.
+.B
+.IP "%"
+In the _printf function there is an if statement that tests if the second %
