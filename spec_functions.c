@@ -13,7 +13,7 @@ int (*get_spec_func(const char *s))(va_list ap)
   spec_t specs[] = {
 	  { 'c', print_char },
 	  { 's', print_string },
-	  { '\0', NULL }
+	  { '\0', NULL },
           { 'd', print_digit },
           { 'i', print_integer },
   };
@@ -31,6 +31,6 @@ int (*get_spec_func(const char *s))(va_list ap)
 	i++;
     }
   putchar('%');
-  putchar(str[i];
+  putchar(str[i]);
 	  return (2);
 }
