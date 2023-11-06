@@ -25,10 +25,6 @@ int _printf(const char *format, ...)
 					i++;
 					putchar('%');
 				}
-				else if (*format == '\0')
-				{
-					putchar("");
-				}
 				else
 				{
 					written = get_spec_func(format);
