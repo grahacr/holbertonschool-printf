@@ -20,7 +20,7 @@ int (*get_spec_func(const char *s))(va_list ap)
     {
       return (NULL);
     }
-  while (specs[i].spec != '\0')
+  while (i < 3)
     {
       if (specs[i].spec == *s)
       {
