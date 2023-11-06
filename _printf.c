@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int success;
 	int (*written)(va_list);
 	int i = 0;
+	int j = 0;
 	if (format)
 	{
 		va_start(ap, format);
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 					i++;
 					putchar('%');
 				}
-				else if (format == NULL)
+				else if (format[j] < 1)
 				{
 					break;
 				}
