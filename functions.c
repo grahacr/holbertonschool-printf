@@ -27,6 +27,7 @@ int print_string(va_list ap)
 		putchar(str[i]);
 		return (len);
 	}
+	}
 	else
 	{
 		for (i = 0; i < 5; i++);
@@ -35,6 +36,5 @@ int print_string(va_list ap)
 			putchar(str[i]);
 			return (5);
 		}
-	}
 	}
 }
