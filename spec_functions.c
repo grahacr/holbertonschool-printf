@@ -14,6 +14,8 @@ int (*get_spec_func(const char *s))(va_list ap)
 	  { 'c', print_char },
 	  { 's', print_string },
 	  { '\0', NULL }
+          { 'd', print_digit },
+          { 'i', print_integer },
   };
   int i = 0;
   while (specs[i].spec != '\0')

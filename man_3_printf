@@ -1,0 +1,12 @@
+.\" Manpage for _printf function
+.\"
+.TH man 1 "06 Nov 2023" "1.0" "printf man page"
+
+.SH NAME
+Printf \- prints string to stdout. The function takes in a format specifier "%" as a call to print out predefined strings or integers.
+.SH SYNOPSIS
+_printf is a simplified version of the true printf function that handles printing given input and returns the number of bytes needed to be allocated.
+.SH DESCRIPTION
+_printf - prints all characters until it reaches a format specifier (%) or the end of a given string (\\0). After finding the specifier it looks to the next character given and reads if it is a s, c, %, d, i, or empty(\\0). After it finds which specifier is given it performs the task which corresponds with the given specifier
+.SH OPTIONS
+The printf function holds no options however
