@@ -30,7 +30,7 @@ int print_string(va_list ap)
 	}
 	else
 	{
-		for (i = 0; i < 5; i++);
+		for (i = 0; i < 5; i++)
 		{
 			str = "(nil)";
 			putchar(str[i]);
