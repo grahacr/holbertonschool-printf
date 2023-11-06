@@ -32,4 +32,5 @@ int print_string(va_list ap)
      putchar(str[i]);
 		return (5);
    }
+ }
 }
