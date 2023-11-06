@@ -28,7 +28,7 @@ int print_string(va_list ap)
 	  }
  else
    {
-     str == "(nil)";
+     str = "(nil)";
      putchar(str[i]);
 		return (5);
    }
