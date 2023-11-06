@@ -5,8 +5,10 @@
 .SH NAME
 Printf \- prints string to stdout. The function takes in a format specifier "%" as a call to print out predefined strings or integers.
 .SH SYNOPSIS
-_printf is a simplified version of the true printf function that handles printing given input and returns the number of bytes needed to be allocated.
+int _printf(const char *format, ...);
 .SH DESCRIPTION
 _printf - prints all characters until it reaches a format specifier (%) or the end of a given string (\\0). After finding the specifier it looks to the next character given and reads if it is a s, c, %, d, i, or empty(\\0). After it finds which specifier is given it performs the task which corresponds with the given specifier
 .SH OPTIONS
-The printf function holds no options however
+The _printf function format specifier "%" takes 5 potential arguments. "c" finds a variable containing a single character and prints it over the "%c". "s" finds a variable containing a string of characters and prints it over the "%s". "%" reads input as "%%" which will let the function know to print a signle "%". "d" finds a variable containing a string of numbers and converts those numbers into an integer value for other uses such as arithmetic. It will then print out the full integer one by one. "i" at this moment handles a string of numbers the same as "%d". So the same process with a different specifier.
+.B
+.IP "c"
