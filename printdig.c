@@ -7,7 +7,7 @@ int print_digit(va_list ap)
 {
 	int count = 0;
 	int calc, hold, track_dig;
-	const char* str = va_arg(args, const char*);
+	const char* str = va_arg(ap, const char*);
 	int value = atoi(str);
 
 	if (value == INT_MIN)
@@ -34,7 +34,7 @@ int print_digit(va_list ap)
 		hold = hold / 10;
 		track_dig = track_dig * 10;
 	}
-	if (value = INT_MIN)
+	if (value == INT_MIN)
 	{
 		putchar('8');
 		count++;
