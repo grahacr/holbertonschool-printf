@@ -18,4 +18,8 @@ int print_char(va_list ap); This function finds the argument passed and prints t
 int print_string(va_list ap); This function finds the argument passed and prints the string of characters that corresponds with the placement of the %s.
 .B
 .IP "%"
-In the _printf function there is an if statement that tests if the second %
+In the _printf function there is an if statement that tests if the second % is present. If so the function prints a single "%".
+.B
+.IP "d" "i"
+int print_digit(va_list ap);
+.SS HI MY NAME IS
