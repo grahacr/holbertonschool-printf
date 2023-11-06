@@ -25,7 +25,6 @@ int print_string(va_list ap)
 			putchar(str[i]);
 		}
 	return (len);
-}
  else
      putchar("(");
 putchar("n";
