@@ -19,9 +19,19 @@ int print_string(va_list ap)
 	char *str = va_arg(ap, char*);
 	int len = strlen(str);
 	int i;
+	if (str != NULL)
 	for (i = 0; i < len; i++)
 		{
 			putchar(str[i]);
 		}
 	return (len);
+}
+ else
+     putchar("(");
+putchar("n";
+	putchar("u");
+putchar("l");
+	putchar("l");
+	putchar(")");
+	return (6);
 }
