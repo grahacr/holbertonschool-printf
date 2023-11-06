@@ -39,3 +39,8 @@ int print_string(va_list ap)
 	}
 	return (len);
 }
+int print_2(va_list ap)
+{
+  (void) ap;
+  return (2);
+}

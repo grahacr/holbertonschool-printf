@@ -17,20 +17,26 @@ int print_char(va_list ap)
 int print_string(va_list ap)
 {
 	char *str = va_arg(ap, char*);
-	int len = strlen(str);
+	int len = 0;
 	int i;
-	for (i = 0; i < len; i++)
-	  {
-		  if (str != NULL)
-		    {
-		      putchar(str[i]);
+
+	if (str != NULL)
+	{
+		len = strlen(str);
+		for (i = 0; i < len; i++)
+		{
+			putchar(str[i]);
+		}
+	}
+	else
+	{
+		str = "(null)";
+		len = 6;
+		for (i = 0; i < len; i++)
+		{
+			putchar(str[i]);
+		}
+	}
 	return (len);
-	  }
- else
-   {
-     str = "(nil)";
-     putchar(str[i]);
-		return (5);
-   }
- }
 }
+int print_2(va_list ap)

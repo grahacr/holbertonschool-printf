@@ -18,7 +18,7 @@ int (*get_spec_func(const char *s))(va_list ap)
   int i = 0;
   if (s[i] == '\0')
     {
-      return (-1);
+      return (NULL);
     }
   while (specs[i].spec != '\0')
     {
@@ -29,6 +29,6 @@ int (*get_spec_func(const char *s))(va_list ap)
 	i++;
     }
   putchar('%');
-  putchar(str[i]);
-	  return (2);
+  putchar(s);
+  return (print_2;
 }
