@@ -7,7 +7,7 @@
  */
 typedef struct spec
 {
-char *spec;
+char spec;
 int (*f)(va_list);
 } spec_t;
 int print_char(va_list ap);

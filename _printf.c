@@ -10,43 +10,43 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int success;
-int (*written)(va_list);
+	int (*written)(va_list);
 	int i = 0;
 	if (format)
-	{
+{
 		va_start(ap, format);
-	while (*format != '\0')
-	{
-		if (*format == '%')
+		while (*format != '\0')
 		{
-			format++;
 			if (*format == '%')
 			{
-				i++;
-				putchar('%');
+				format++;
+				if (*format == '%')
+				{
+					i++;
+					putchar('%');
+				}
+				else
+				{
+					written = get_spec_func(format);
+					if (written != NULL)
+					{
+						success = written(ap);
+						if (success == -1)
+						{
+							va_end(ap);
+							return (-1);
+						}
+						i += success;
+					}
+				}
 			}
 			else
 			{
-				written = get_spec_func(format);
-				if (written != NULL)
-				{
-					success = written(ap);
-					if (success == -1)
-					{
-						va_end(ap);
-						return (-1);
-					}
-					i += success;
-				}
-			}
+				putchar(*format);
+				i++;
+      }
+			format++;
 		}
-		else
-		{
-			putchar(*format);
-			i++;
-		}
-		format++;
-	}
 	va_end(ap);
 	return (i);
 	}
