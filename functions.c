@@ -19,7 +19,7 @@ int print_string(va_list ap)
 	char *str = va_arg(ap, char*);
 	int len = strlen(str);
 	int i;
-	if (str != '\0' && str != NULL)
+	if (*str != '\0' && str != NULL)
 	  {
 	for (i = 0; i < len; i++)
 		{
