@@ -11,9 +11,9 @@
  */
 int print_char(va_list ap)
 {
-  char c = va_arg(ap, int);
-  putchar(c);
-  return (1);
+char c = va_arg(ap, int);
+putchar(c);
+return (1);
 }
 /**
  *print_string - function that prints the given string
@@ -22,25 +22,25 @@ int print_char(va_list ap)
  */
 int print_string(va_list ap)
 {
-  char *str = va_arg(ap, char*);
-  int len = 0;
-  int i;
-  if (str != NULL)
-    {
-      len = strlen(str);
-      for (i = 0; i < len; i++)
-	{
-	  putchar(str[i]);
-	}
-    }
-  else
-    {
-      str = "(null)";
-  len = 6;
-  for (i = 0; i < len; i++)
-    {
-      putchar(str[i]);
-    }
+char *str = va_arg(ap, char*);
+int len = 0;
+int i;
+if (str != NULL)
+{
+len = strlen(str);
+for (i = 0; i < len; i++)
+{
+putchar(str[i]);
+}
+}
+else
+{
+str = "(null)";
+len = 6;
+for (i = 0; i < len; i++)
+{
+putchar(str[i]);
+}
 }
 return (len);
 }
@@ -51,8 +51,8 @@ return (len);
  */
 int print_2(va_list ap)
 {
-  (void) ap;
-  return (2);
+(void) ap;
+return (2);
 }
 /**
  *print_null - function that returns -1 for Null specifier
@@ -61,6 +61,6 @@ int print_2(va_list ap)
  */
 int print_null(va_list ap)
 {
-  (void) ap;
-  return (-1);
+(void) ap;
+return (-1);
 }
