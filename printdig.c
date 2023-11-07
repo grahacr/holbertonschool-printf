@@ -31,22 +31,22 @@ int print_digit(va_list ap)
 	{
 		calc = value;
 	}
-	hold = calc;
+	hold = calc; //holding calc value without changing calc
 	track_dig = 1;
 	while (hold >= 10)
 	{
-		hold = hold / 10;
-		track_dig = track_dig * 10;}
-	while (track_dig >= 1)
+		hold = hold / 10; //calculate what to print and hold it
+		track_dig = track_dig * 10;} //tracking number of digits
+	while (track_dig >= 1) //from previous line
 	{
-		if (value == INT_MIN && track_dig == 1) {
+		if (value == INT_MIN && track_dig == 1) { //if these criteria are met, add 8 to print INT_MIN
 			putchar('8');
 			count++;
 			track_dig = track_dig / 10; }
 		else
 		{
 			count++;
-			putchar((calc / track_dig) % 10 + '0');
+			putchar((calc / track_dig) % 10 + '0'); //prints all other positive integers
 			track_dig = track_dig / 10;
 		}
 	}
