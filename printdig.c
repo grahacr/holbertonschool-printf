@@ -25,14 +25,6 @@ int print_digit(va_list ap)
 	else
 	{
 		calc = value;
-	}
-	if (value == INT_MIN)
-	{
-		putchar('8');
-		count++;
-	}
-	else
-	{
 		hold = calc;
 		track_dig = 1;
 	while (hold >= 10)
@@ -42,7 +34,15 @@ int print_digit(va_list ap)
 		}
 		while (track_dig >= 1)
 		{
-			count++;
+			if (value == INT_MIN && track_dig == 1)
+			{
+				putchar('8');
+				count++;
+				track_dig = track_dig / 10;
+	}
+			else
+			{
+				count++;
 			putchar((calc / track_dig) % 10 + '0');
 			track_dig = track_dig / 10;
 		}
