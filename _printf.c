@@ -50,8 +50,8 @@ int _printf(const char *format, ...)
 			}
 			format++;
 		}
-	va_end(ap);
-	return (i);
+		va_end(ap);
+		return (i);
 	}
 	return (-1);
 }
