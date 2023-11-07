@@ -34,13 +34,13 @@ int _printf(const char *format, ...)
 					written = get_spec_func(format);
 					if (written != NULL)
 					{
-						success = written(ap);
-						if (success == -1)
-						{
-							va_end(ap);
-							return (-1);
-						}
-						i += success;
+					success = written(ap);
+					if (success == -1)
+					{
+					va_end(ap);
+					return (-1);
+					}
+					i += success;
 					}
 				}
 			}

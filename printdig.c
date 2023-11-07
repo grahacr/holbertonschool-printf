@@ -39,10 +39,10 @@ int print_digit(va_list ap)
 		track_dig = track_dig * 10;}
 	while (track_dig >= 1)
 	{
-		if (value == INT_MIN && track_dig == 1){
+		if (value == INT_MIN && track_dig == 1) {
 			putchar('8');
 			count++;
-			track_dig = track_dig / 10;}
+			track_dig = track_dig / 10; }
 		else
 		{
 			count++;
