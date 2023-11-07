@@ -13,3 +13,9 @@
     <li><b>_PRINTF.C</b> - this is our custom _printf function which should return the amount of bytes written to standard output</li>
   </ul>
 </details>
+<details>
+  <summary><b>FORMAT SPECIFIERS:</b></summary>
+  <ul>
+    <li><b>%c: character</li>
+  </ul>
+</details>
