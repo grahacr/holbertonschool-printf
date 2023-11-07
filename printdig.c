@@ -8,7 +8,8 @@
  *print_digit - function that prints out a given number as an integer value
  *@ap: number to be pushed through function
  *Return: The number of integers printed EX: 123 - 3
- */int print_digit(va_list ap)
+ */
+int print_digit(va_list ap)
 {
 int count = 0;
 int calc, hold, track_dig;

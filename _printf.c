@@ -4,7 +4,10 @@
 #include <stdarg.h>
 #include <unistd.h>
 /**
- *
+ *_printf - function that prints any given argument
+ *@:format: pointer to the first argument passed to function
+ *@...: infinite number of variables to be passed to function
+ *Return: Number of bytes printed
  */
 int _printf(const char *format, ...)
 {
