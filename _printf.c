@@ -16,28 +16,39 @@ int _printf(const char *format, ...)
 	int (*written)(va_list);
 	int i = 0;
 
-	if (format){
+	if (format)
+	{
 		va_start(ap, format);
 		while (*format != '\0')
 		{
 			if (*format == '%')
 			{
 				format++;
-				if (*format == '%'){
+				if (*format == '%')
+				{
 					i++;
-					putchar('%');}
-				else{
-					written = get_spec_func(format);
-					if (written != NULL){
-						success = written(ap);
-						if (success == -1){
-							va_end(ap);
-							return (-1);}
-						i += success;}
+					putchar('%');
 				}
-			}else{
+				else
+				{
+					written = get_spec_func(format);
+					if (written != NULL)
+					{
+						success = written(ap);
+						if (success == -1)
+						{
+							va_end(ap);
+							return (-1);
+						}
+						i += success;
+					}
+				}
+			}
+			else
+			{
 				putchar(*format);
-				i++;}
+				i++;
+			}
 			format++;
 		}
 		va_end(ap);

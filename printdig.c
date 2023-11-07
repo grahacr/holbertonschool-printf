@@ -27,11 +27,14 @@ int print_digit(va_list ap)
 		count++;
 		calc = abs(value);
 	}
-	else{
-		calc = value;}
+	else
+	{
+		calc = value;
+	}
 	hold = calc;
 	track_dig = 1;
-	while (hold >= 10){
+	while (hold >= 10)
+	{
 		hold = hold / 10;
 		track_dig = track_dig * 10;}
 	while (track_dig >= 1)
@@ -46,5 +49,6 @@ int print_digit(va_list ap)
 			putchar((calc / track_dig) % 10 + '0');
 			track_dig = track_dig / 10;
 		}
-	}return (count);
+	}
+	return (count);
 }
