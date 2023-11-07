@@ -2,7 +2,7 @@
 #define main_h
 #include <stdarg.h>
 /**
- *struct spec - structure that defines a function pointer 
+ *struct spec - structure that defines a function pointer
  *@spec: variable that helps identify the format specifier
  *Description: Structure that uses function pointers to solve code
  */
