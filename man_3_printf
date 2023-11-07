@@ -20,7 +20,7 @@ int print_string(va_list ap); This function finds the argument passed and prints
 .IP "%"
 In the _printf function there is an if statement that tests if the second % is present. If so the function prints a single "%".
 .B
-.IP "d" "i"
+.IP "d and i"
 int print_digit(va_list ap); This function gathers the argument and prints the integer value.
 .SH RETURN VALUE
 Upon success _printf returns the number of bytes neccessary for the number of characters printed.
