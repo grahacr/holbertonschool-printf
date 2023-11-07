@@ -18,7 +18,7 @@ int (*get_spec_func(const char *s))(va_list ap)
 	  { 'd', print_digit }
   };
   int i = 0;
-  while (i < 3)
+  while (i < 5)
     {
       if (specs[i].spec == *s)
       {
