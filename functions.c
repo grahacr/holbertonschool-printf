@@ -46,7 +46,7 @@ return (len);
 }
 /**
  *print_2 - function that returns 2 for wrong specifier given
- *@ap: unused input 
+ *@ap: unused input
  *Return: 2 for characters printed
  */
 int print_2(va_list ap)
