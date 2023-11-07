@@ -6,10 +6,10 @@
 <details>
   <summary><b>FILES:</b></summary>
   <ul>
-    <li><b>main.h</b> - header file for printf project. This header file includes the initialization of our structure data type and contains prototypes for all of our functions included in our array of function pointers.</li>
-    <li><b>functions.c</b> - functions for converting certain special characters to and writing them to standard output</li>
-    <li><b>printdig.c</b> - file for printdigit function that was too long to include in functions file</li>
-    <li><b>spec_functions.c</b> - this file further identifies the structure full of pointer functions and executes the function depending on the special character</li>
-    <li><b>_printf.c</b> - this is our custom _printf function which should return the amount of bytes written to standard output</li>
+    <li><b>MAIN.H</b> - header file for printf project. This header file includes the initialization of our structure data type and contains prototypes for all of our functions included in our array of function pointers.</li>
+    <li><b><u>FUNCTIONS.C</b></u> - functions for converting certain special characters to and writing them to standard output</li>
+    <li><b><u>PRINTDIG.C</b></u> - file for printdigit function that was too long to include in functions file</li>
+    <li><b>SPEC_FUNCTIONS.C</b> - this file further identifies the structure full of pointer functions and executes the function depending on the special character</li>
+    <li><b>_PRINTF.C</b> - this is our custom _printf function which should return the amount of bytes written to standard output</li>
   </ul>
 </details>
