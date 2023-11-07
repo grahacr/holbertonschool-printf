@@ -35,7 +35,7 @@ int print_string(va_list ap)
     }
   else
     {
-      str = "(null)");
+      str = "(null)";
   len = 6;
   for (i = 0; i < len; i++)
     {
