@@ -15,39 +15,29 @@ int _printf(const char *format, ...)
 	int success;
 	int (*written)(va_list);
 	int i = 0;
-	if (format)
-	{
+
+	if (format){
 		va_start(ap, format);
 		while (*format != '\0')
 		{
 			if (*format == '%')
 			{
 				format++;
-				if (*format == '%')
-				{
+				if (*format == '%'){
 					i++;
-					putchar('%');
-				}
-				else
-				{
+					putchar('%');}
+				else{
 					written = get_spec_func(format);
-					if (written != NULL)
-					{
+					if (written != NULL){
 						success = written(ap);
-						if (success == -1)
-						{
+						if (success == -1){
 							va_end(ap);
-							return (-1);
-						}
-						i += success;
-					}
+							return (-1);}
+						i += success;}
 				}
-			}
-			else
-			{
+			}else{
 				putchar(*format);
-				i++;
-			}
+				i++;}
 			format++;
 		}
 		va_end(ap);
