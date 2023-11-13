@@ -31,10 +31,10 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					written = get_spec_func(format); //written fnct ptr holding function needed for specifier
+					written = get_spec_func(format);
 					if (written != NULL)
 					{
-					success = written(ap); //integer success is holding return value of written function
+					success = written(ap);
 					if (success == -1)
 					{
 					va_end(ap);
